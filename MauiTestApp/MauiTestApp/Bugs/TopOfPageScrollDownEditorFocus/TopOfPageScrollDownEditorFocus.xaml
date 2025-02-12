@@ -22,7 +22,6 @@
                     MinimumHeightRequest="-1"
                     HeightRequest="25"
                     BackgroundColor="Blue"
-                    HandlerChanged="Element_OnHandlerChanged"
                     Grid.Row="2" />
             
         </Grid>
