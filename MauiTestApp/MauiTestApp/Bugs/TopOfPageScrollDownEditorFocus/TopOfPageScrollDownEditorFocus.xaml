@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTestApp.Bugs.TopOfPageScrollDownEditorFocus.TopOfPageScrollDownEditorFocus">
+    
+    <ScrollView>
+
+        <Grid RowDefinitions="Auto, Auto, Auto"
+              RowSpacing="4">
+
+            <BoxView HeightRequest="50"
+                     BackgroundColor="Red"/>
+            
+            <Editor Placeholder="This has its TextContainerInsets set to zero"
+                    MinimumHeightRequest="-1"
+                    BackgroundColor="Blue"
+                    HandlerChanged="Element_OnHandlerChanged"
+                    Grid.Row="1" />
+
+            <Editor Placeholder="This has its HeightRequest set to 25"
+                    MinimumHeightRequest="-1"
+                    HeightRequest="25"
+                    BackgroundColor="Blue"
+                    HandlerChanged="Element_OnHandlerChanged"
+                    Grid.Row="2" />
+            
+        </Grid>
+
+    </ScrollView>
+    
+</ContentPage>
