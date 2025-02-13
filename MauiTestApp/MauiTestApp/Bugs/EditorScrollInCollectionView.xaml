@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTestApp.Bugs.EditorScrollInCollectionView">
+    
+    <CollectionView>
+        <CollectionView.ItemsSource>
+            <Array Type="{x:Type x:String}">
+                <x:String>Test 1</x:String>
+                <x:String>Test 2</x:String>
+                <x:String>Test 3</x:String>
+                <x:String>Test 4</x:String>
+                <x:String>Test 5</x:String>
+                <x:String>Test 6</x:String>
+                <x:String>Test 7</x:String>
+                <x:String>Test 8</x:String>
+                <x:String>Test 9</x:String>
+                <x:String>Test 10</x:String>
+                <x:String>Test 11</x:String>
+                <x:String>Test 12</x:String>
+                <x:String>Test 13</x:String>
+            </Array>
+        </CollectionView.ItemsSource>
+        
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                    
+                    
+                    <Editor Text="{Binding .}"/>
+                
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        
+        <CollectionView.FooterTemplate>
+            <DataTemplate>
+                <BoxView HeightRequest="100"
+                         BackgroundColor="Blue"/>
+            </DataTemplate>
+        </CollectionView.FooterTemplate>
+        
+    </CollectionView>
+    
+    
+</ContentPage>
