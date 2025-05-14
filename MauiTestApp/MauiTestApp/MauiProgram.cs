@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Controls.Handlers.Items2;
 
 namespace MauiTestApp;
 
@@ -15,6 +16,11 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+		builder.ConfigureMauiHandlers(configure =>
+		{
+			configure.AddHandler<CollectionView, CollectionViewHandler2>();
+		});
+		
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
