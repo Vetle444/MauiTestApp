@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mauiTestApp="clr-namespace:MauiTestApp"
-             xmlns:topOfPageScrollDownEditorFocus="clr-namespace:MauiTestApp.Bugs.TopOfPageScrollDownEditorFocus"
              x:Class="MauiTestApp.MainPage">
 
     <ScrollView>
@@ -10,8 +9,8 @@
             Padding="30,0"
             Spacing="25">
             
-            <Button Text="TopOfPageScrollDownEditorFocus"
-                    Command="{mauiTestApp:Command ContentPageType={x:Type topOfPageScrollDownEditorFocus:TopOfPageScrollDownEditorFocus}}" />
+            <Button Text="Test Page"
+                    Command="{mauiTestApp:Command ContentPageType={x:Type mauiTestApp:RegularPage}}" />
             
         </VerticalStackLayout>
     </ScrollView>

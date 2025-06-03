@@ -9,20 +9,6 @@ public partial class App : Application
 
 	protected override Window CreateWindow(IActivationState? activationState)
 	{
-		var shell = new Shell();
-        var tabBar = new TabBar();
-        var tab = new Tab();
-
-        tab.Items.Add(new ShellContent()
-        {
-            ContentTemplate =
-                new DataTemplate(() => new MainPage())
-        });
-        tabBar.Items.Add(tab);
-        shell.Items.Add(tabBar);
-
-        return new Window(shell);
-		
-		/*return new Window(new AppShell());*/
+        return new Window(new AppShell());
 	}
 }

@@ -17,14 +17,7 @@ public class CommandExtension : IMarkupExtension<ICommand>
 
             var activatedObject = Activator.CreateInstance(ContentPageType);
             if (activatedObject is not Page page) return;
-            if (Shell.Current != null)
-            {
-                Shell.Current.Navigation.PushAsync(page);
-            }
-            else if(Application.Current != null && Application.Current.MainPage != null)
-            {
-                Application.Current.MainPage.Navigation.PushAsync(page);
-            }
+            Shell.Current.Navigation.PushAsync(page);
         });
     }
 

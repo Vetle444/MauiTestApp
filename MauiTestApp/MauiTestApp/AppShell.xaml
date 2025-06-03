@@ -5,9 +5,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiTestApp">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Test 1">
+            <ShellContent>
+                <local:MainPage />
+            </ShellContent>
+        </Tab>
+        <Tab Title="Test 2">
+            <ShellContent>
+                <local:MainPage />
+            </ShellContent>
+        </Tab>
+    </TabBar>
 
 </Shell>
