@@ -12,4 +12,19 @@ public partial class RegularPage : ContentPage
     {
         InitializeComponent();
     }
+
+    private void Button_OnClicked(object? sender, EventArgs e)
+    {
+        Navigation.PushAsync(new RegularPage2());
+    }
+
+    protected override void OnHandlerChanged()
+    {
+        base.OnHandlerChanged();
+
+        if (Handler is null)
+        {
+            DisplayAlert("Handler disconnected", "The handler for this page has been disconnected.", "OK");
+        }
+    }
 }

@@ -9,8 +9,16 @@
             Padding="30,0"
             Spacing="25">
             
+            <Button Text="Test Page Modal"
+                    Clicked="Button_OnClicked" />
+            
             <Button Text="Test Page"
-                    Command="{mauiTestApp:Command ContentPageType={x:Type mauiTestApp:RegularPage}}" />
+                    Clicked="Button_OnClicked3" />
+            
+            <!--<Button Text="Check test page aliveness"
+                    Clicked="Button_OnClicked2"/>
+            
+            <Label x:Name="Label"></Label>-->
             
         </VerticalStackLayout>
     </ScrollView>
