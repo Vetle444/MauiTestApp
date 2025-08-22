@@ -5,26 +5,25 @@
              x:Class="MauiTestApp.CollectionView2Bug"
              x:Name="This">
     
-    <CollectionView ItemsSource="{Binding Source={x:Reference This}, Path=Items}">
-        
-        <CollectionView.Header>
-            <Button Text="Reverse"
-                    Clicked="Button_OnClicked" />
-        </CollectionView.Header>
+    <CollectionView x:Name="CollectionView">
         
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <VerticalStackLayout x:Name="VerticalStackLayout">
                     <Label Text="{Binding .}"
                            FontSize="30"/>
-                    <Grid ColumnDefinitions="Auto, *">
-                        <Label Text="Parent: "></Label>
-                        <Label Text="{Binding Source={x:Reference VerticalStackLayout}, Path=Parent, TargetNullValue=`null`}"
-                               Grid.Column="1" />
-                    </Grid>
                 </VerticalStackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
+        
+        <CollectionView.FooterTemplate>
+            <DataTemplate>
+                <Label HeightRequest="100" BackgroundColor="Red"
+                       Text="This is the footer!"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"></Label>
+            </DataTemplate>
+        </CollectionView.FooterTemplate>
         
     </CollectionView>
     

@@ -18,7 +18,7 @@ public static class MauiProgram
 
 		builder.ConfigureMauiHandlers(configure =>
 		{
-			configure.AddHandler<CollectionView, CollectionViewHandler2>();
+			/*configure.AddHandler<CollectionView, CollectionViewHandler2>();*/
 		});
 		
 #if DEBUG

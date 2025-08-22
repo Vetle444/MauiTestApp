@@ -31,6 +31,15 @@ public partial class CollectionView2Bug : ContentPage
     public CollectionView2Bug()
     {
         InitializeComponent();
+
+        _ = DelayedFunction();
+    }
+
+    private async Task DelayedFunction()
+    {
+
+        await Task.Delay(2000);
+        CollectionView.ItemsSource = Items;
     }
 
     public List<string> Items
@@ -42,12 +51,5 @@ public partial class CollectionView2Bug : ContentPage
             m_items = value;
             OnPropertyChanged();
         }
-    }
-
-    private void Button_OnClicked(object? sender, EventArgs e)
-    {
-        var reverseItems = new List<string>(Items);
-        reverseItems.Reverse();
-        Items = new List<string>(reverseItems);
     }
 }
