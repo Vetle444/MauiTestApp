@@ -24,7 +24,12 @@ public partial class RegularPage : ContentPage
 
         if (Handler is null)
         {
-            DisplayAlert("Handler disconnected", "The handler for this page has been disconnected.", "OK");
+            MainThread.BeginInvokeOnMainThread(async () =>
+            {
+                await Task.Delay(1000);    
+                _ = Shell.Current.DisplayAlert("Handler disconnected",
+                    "The handler for root page has been disconnected.", "OK");
+            });
         }
     }
 }

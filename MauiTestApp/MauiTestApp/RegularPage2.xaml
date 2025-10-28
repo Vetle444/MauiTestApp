@@ -5,10 +5,10 @@
              x:Class="MauiTestApp.RegularPage2"
              Title="Test Page 2">
     <VerticalStackLayout>
-            <Button Text="Remove test page 1"
+            <Button Text="Pop modal using NavigationPage"
                     Clicked="Button_OnClicked"></Button>
             
-            <Button Text="Pop"
+            <Button Text="Pop modal with Navigation property from ContentPage"
                     Clicked="Button_OnClicked2" />
     </VerticalStackLayout>
 </ContentPage>
