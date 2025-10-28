@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mauiTestApp="clr-namespace:MauiTestApp"
-             xmlns:topOfPageScrollDownEditorFocus="clr-namespace:MauiTestApp.Bugs.TopOfPageScrollDownEditorFocus"
              x:Class="MauiTestApp.MainPage">
 
     <ScrollView>
@@ -10,8 +8,27 @@
             Padding="30,0"
             Spacing="25">
             
-            <Button Text="TopOfPageScrollDownEditorFocus"
-                    Command="{mauiTestApp:Command ContentPageType={x:Type topOfPageScrollDownEditorFocus:TopOfPageScrollDownEditorFocus}}" />
+            <Button Text="CollectionView Template Handler Test"
+                    Clicked="OnCollectionViewTestClicked" />
+            
+            <Button Text="CollectionView Remove Items Test"
+                    Clicked="OnCollectionViewRemoveTestClicked" />
+            
+            <Button Text="Show Labels With Connected Handlers"
+                    Clicked="OnShowConnectedHandlers"
+                    BackgroundColor="Orange" />
+            
+            <Button Text="Force Cleanup All Connected Handlers"
+                    Clicked="OnForceCleanup"
+                    BackgroundColor="Red" />
+            
+            <ScrollView MaximumHeightRequest="300">
+                <Label x:Name="ConnectedHandlersLabel" 
+                       Text="" 
+                       FontSize="12" 
+                       TextColor="Red"
+                       Margin="0,5,0,0"/>
+            </ScrollView>
             
         </VerticalStackLayout>
     </ScrollView>
