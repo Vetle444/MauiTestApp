@@ -2,16 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mauiTestApp="clr-namespace:MauiTestApp"
-             xmlns:topOfPageScrollDownEditorFocus="clr-namespace:MauiTestApp.Bugs.TopOfPageScrollDownEditorFocus"
+             xmlns:modalPageNotCleanedUp="clr-namespace:MauiTestApp.Bugs.ModalPageNotCleanedUp"
              x:Class="MauiTestApp.MainPage">
 
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            
-            <Button Text="TopOfPageScrollDownEditorFocus"
-                    Command="{mauiTestApp:Command ContentPageType={x:Type topOfPageScrollDownEditorFocus:TopOfPageScrollDownEditorFocus}}" />
+
+            <Button Text="ModalPageNotCleanedUp"
+                    Command="{mauiTestApp:Command ContentPageType={x:Type modalPageNotCleanedUp:ModalPageNotCleanedUp}}" />
             
         </VerticalStackLayout>
     </ScrollView>
