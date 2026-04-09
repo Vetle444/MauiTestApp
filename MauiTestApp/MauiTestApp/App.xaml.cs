@@ -10,7 +10,7 @@ public partial class App : Application
 	protected override Window CreateWindow(IActivationState? activationState)
 	{
 		var shell = new Shell();
-        var tabBar = new TabBar();
+        var tabBar = new TabBar { Route = "root0" };
         var tab = new Tab();
 
         tab.Items.Add(new ShellContent()

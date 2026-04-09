@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTestApp.SecondRootPage"
+             Title="Second Root Page">
+
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+        <Label Text="This is the second root page."
+               HorizontalOptions="Center"
+               FontSize="18" />
+
+        <Label Text="Check Debug output — child element handlers on MainPage were NOT disconnected."
+               HorizontalOptions="Center"
+               TextColor="Red" />
+
+        <Button Text="Force GC &amp; Check"
+                Clicked="OnForceGcClicked" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
