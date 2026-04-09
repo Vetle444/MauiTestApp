@@ -42,45 +42,28 @@ public partial class SecondRootPage
 
 	private void RefreshLog()
 	{
-		if (HandlerLog.PreviousPageRef == null)
+		if (HandlerLog.TrackedElements.Count == 0)
 		{
-			LogLabel.Text = "No previous page captured.";
+			LogLabel.Text = "No elements tracked yet.";
 			return;
 		}
 
-		if (!HandlerLog.PreviousPageRef.TryGetTarget(out var page))
-		{
-			LogLabel.Text = "MainPage has been garbage collected.";
-			return;
-		}
+		var lines = new List<string>();
 
-		var lines = new List<string>
+		foreach (var tracked in HandlerLog.TrackedElements)
 		{
-			$"MainPage alive: YES (not collected)",
-			$"MainPage.Handler: {(page.Handler != null ? "STILL ACTIVE (leak!)" : "null (disconnected)")}",
-			""
-		};
+			if (!tracked.Ref.TryGetTarget(out var element))
+			{
+				lines.Add($"{tracked.Name}: collected");
+				continue;
+			}
 
-		foreach (var child in GetAllChildren(page))
-		{
-			if (child is not VisualElement ve) continue;
-			var name = ve.GetType().Name;
-			if (ve.Handler != null)
-				lines.Add($"  {name}.Handler: STILL ACTIVE (leak!)");
-			else
-				lines.Add($"  {name}.Handler: null (disconnected)");
+			var handlerStatus = element.Handler != null
+				? "STILL ACTIVE (leak!)"
+				: "null (disconnected)";
+			lines.Add($"{tracked.Name}: Handler {handlerStatus}");
 		}
 
 		LogLabel.Text = string.Join("\n", lines);
-	}
-
-	private static IEnumerable<IVisualTreeElement> GetAllChildren(IVisualTreeElement parent)
-	{
-		foreach (var child in parent.GetVisualChildren())
-		{
-			yield return child;
-			foreach (var grandchild in GetAllChildren(child))
-				yield return grandchild;
-		}
 	}
 }
