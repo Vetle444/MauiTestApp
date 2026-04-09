@@ -4,19 +4,19 @@
              x:Class="MauiTestApp.SecondRootPage"
              Title="Second Root Page">
 
-    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="10">
 
-        <Label Text="This is the second root page."
-               HorizontalOptions="Center"
-               FontSize="18" />
+            <Label Text="Handler Log from MainPage:"
+                   FontSize="18"
+                   FontAttributes="Bold" />
 
-        <Label Text="Check Debug output — child element handlers on MainPage were NOT disconnected."
-               HorizontalOptions="Center"
-               TextColor="Red" />
+            <Label x:Name="LogLabel"
+                   Text=""
+                   FontSize="12"
+                   FontFamily="Courier" />
 
-        <Button Text="Force GC &amp; Check"
-                Clicked="OnForceGcClicked" />
-
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>

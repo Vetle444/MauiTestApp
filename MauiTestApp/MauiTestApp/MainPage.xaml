@@ -26,14 +26,8 @@
 
         <Button x:Name="ForceGcButton"
                 Text="Force GC &amp; Log"
-                Clicked="OnForceGcClicked"
                 HandlerChanging="OnElementHandlerChanging"
                 HandlerChanged="OnElementHandlerChanged" />
-
-        <Label x:Name="StatusLabel"
-               Text=""
-               TextColor="Red"
-               FontSize="14" />
 
     </VerticalStackLayout>
 
