@@ -1,6 +1,6 @@
 namespace MauiTestApp;
 
-public record TrackedElement(string Name, WeakReference<VisualElement> Ref);
+public record TrackedElement(string Name, VisualElement Element);
 
 public static class HandlerLog
 {

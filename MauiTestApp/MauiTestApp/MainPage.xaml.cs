@@ -10,9 +10,9 @@ public partial class MainPage
 	private async void OnSwapRootClicked(object? sender, EventArgs e)
 	{
 		HandlerLog.TrackedElements.Clear();
-		HandlerLog.TrackedElements.Add(new("MainPage (ContentPage)", new WeakReference<VisualElement>(this)));
-		HandlerLog.TrackedElements.Add(new("MyLabel (Label)", new WeakReference<VisualElement>(MyLabel)));
-		HandlerLog.TrackedElements.Add(new("MyEntry (Entry)", new WeakReference<VisualElement>(MyEntry)));
+		HandlerLog.TrackedElements.Add(new("MainPage (ContentPage)", this));
+		HandlerLog.TrackedElements.Add(new("MyLabel (Label)", MyLabel));
+		HandlerLog.TrackedElements.Add(new("MyEntry (Entry)", MyEntry));
 
 		var tabBar = new TabBar { Route = "root1" };
 		tabBar.Items.Add(new Tab
