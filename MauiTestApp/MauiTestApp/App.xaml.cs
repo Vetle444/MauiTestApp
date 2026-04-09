@@ -22,7 +22,5 @@ public partial class App : Application
         shell.Items.Add(tabBar);
 
         return new Window(shell);
-		
-		/*return new Window(new AppShell());*/
 	}
 }

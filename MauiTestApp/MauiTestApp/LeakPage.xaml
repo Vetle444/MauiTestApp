@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTestApp.LeakPage"
+             Title="Leak Page">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Action" Clicked="OnToolbarItemClicked" />
+    </ContentPage.ToolbarItems>
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+        <Label Text="This page has a ToolbarItem with a Clicked event."
+               HorizontalOptions="Center" />
+        <Label Text="Dismiss this modal and check if this page gets collected."
+               HorizontalOptions="Center" />
+        <Button Text="Close" Clicked="OnCloseClicked" />
+    </VerticalStackLayout>
+
+</ContentPage>
