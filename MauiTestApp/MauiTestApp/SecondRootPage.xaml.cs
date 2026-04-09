@@ -52,10 +52,8 @@ public partial class SecondRootPage
 
 		foreach (var tracked in HandlerLog.TrackedElements)
 		{
-			var handlerStatus = tracked.Element.Handler != null
-				? "STILL ACTIVE (leak!)"
-				: "null (disconnected)";
-			lines.Add($"{tracked.Name}: Handler {handlerStatus}");
+			var disconnected = tracked.Element.Handler == null;
+			lines.Add($"{tracked.Name}: {(disconnected ? "disconnected" : "not disconnected")}");
 		}
 
 		LogLabel.Text = string.Join("\n", lines);
