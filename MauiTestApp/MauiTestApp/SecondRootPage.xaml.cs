@@ -8,15 +8,8 @@ public partial class SecondRootPage
 		RefreshLog();
 	}
 
-	private async void OnForceGcClicked(object? sender, EventArgs e)
+	private void OnRefreshClicked(object? sender, EventArgs e)
 	{
-		for (int i = 0; i < 5; i++)
-		{
-			GC.Collect();
-			GC.WaitForPendingFinalizers();
-			GC.Collect();
-			await Task.Delay(100);
-		}
 		RefreshLog();
 	}
 

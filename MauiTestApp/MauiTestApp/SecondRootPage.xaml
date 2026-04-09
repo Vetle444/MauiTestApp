@@ -16,8 +16,8 @@
                    FontSize="12"
                    FontFamily="Courier" />
 
-            <Button Text="Force GC &amp; Refresh Log"
-                    Clicked="OnForceGcClicked" />
+            <Button Text="Refresh"
+                    Clicked="OnRefreshClicked" />
 
             <Button Text="Swap Back to MainPage"
                     Clicked="OnSwapBackClicked" />
