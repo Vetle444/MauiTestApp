@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace MauiNet10NavBarRepro;
+namespace MauiTestApp;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

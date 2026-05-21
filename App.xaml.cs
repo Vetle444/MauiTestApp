@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace MauiNet10NavBarRepro;
+﻿namespace MauiTestApp;
 
 public partial class App : Application
 {

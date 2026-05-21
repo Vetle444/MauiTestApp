@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace MauiNet10NavBarRepro;
+namespace MauiTestApp;
 
 public static class MauiProgram
 {

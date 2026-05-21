@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MauiNet10NavBarRepro;
+namespace MauiTestApp;
 
 [Application]
 public class MainApplication : MauiApplication

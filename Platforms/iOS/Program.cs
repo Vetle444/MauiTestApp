@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace MauiNet10NavBarRepro;
+namespace MauiTestApp;
 
 public class Program
 {

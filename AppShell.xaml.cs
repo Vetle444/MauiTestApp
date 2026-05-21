@@ -1,4 +1,4 @@
-﻿namespace MauiNet10NavBarRepro;
+﻿namespace MauiTestApp;
 
 public partial class AppShell : Shell
 {
