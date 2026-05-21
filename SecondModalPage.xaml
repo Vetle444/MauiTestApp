@@ -4,6 +4,11 @@
              x:Class="MauiTestApp.SecondModalPage"
              Title="Second">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Test"
+                     Order="Primary" />
+    </ContentPage.ToolbarItems>
+
     <ScrollView>
         <VerticalStackLayout Padding="24"
                              Spacing="16">

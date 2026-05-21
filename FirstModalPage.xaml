@@ -4,10 +4,15 @@
              x:Class="MauiTestApp.FirstModalPage"
              Title="First">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Test"
+                     Order="Primary" />
+    </ContentPage.ToolbarItems>
+
     <ScrollView>
         <VerticalStackLayout Padding="24"
                              Spacing="16">
-            <Label Text="This page should have a gray navigation bar with white title text."
+            <Label Text="This page should have a white navigation bar with yellow title text."
                    FontSize="18" />
 
             <Button Text="Push second page"

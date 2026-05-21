@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiTestApp.MainPage">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Test"
+                     Order="Primary" />
+    </ContentPage.ToolbarItems>
+
     <Grid Padding="24">
         <VerticalStackLayout Spacing="16"
                              VerticalOptions="Center">
@@ -10,10 +15,10 @@
                    FontSize="20"
                    HorizontalTextAlignment="Center" />
 
-                <Button Text="Open modal: NavigationPage colors"
+            <Button Text="Open modal: NavigationPage colors"
                     Clicked="OnOpenNavigationPageColorsModalClicked" />
 
-                <Button Text="Open modal: page attached colors"
+            <Button Text="Open modal: page attached colors"
                     Clicked="OnOpenAttachedPropertyModalClicked" />
         </VerticalStackLayout>
     </Grid>

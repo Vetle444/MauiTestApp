@@ -12,8 +12,8 @@ public partial class MainPage : ContentPage
 		await Navigation.PushModalAsync(
 			new NavigationPage(new FirstModalPage(applyAttachedNavBarColors: false))
 			{
-				BarBackgroundColor = Colors.Gray,
-				BarTextColor = Colors.White
+				BarBackgroundColor = Colors.White,
+				BarTextColor = Colors.Yellow
 			});
 	}
 

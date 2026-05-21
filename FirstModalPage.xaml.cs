@@ -12,8 +12,8 @@ public partial class FirstModalPage : ContentPage
 
 		if (applyAttachedNavBarColors)
 		{
-			SetValue(NavigationPage.BarBackgroundColorProperty, Colors.Gray);
-			SetValue(NavigationPage.BarTextColorProperty, Colors.White);
+			SetValue(NavigationPage.BarBackgroundColorProperty, Colors.White);
+			SetValue(NavigationPage.BarTextColorProperty, Colors.Yellow);
 		}
 	}
 
