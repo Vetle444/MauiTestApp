@@ -7,13 +7,18 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private async void OnOpenModalClicked(object? sender, EventArgs e)
+	private async void OnOpenNavigationPageColorsModalClicked(object? sender, EventArgs e)
 	{
 		await Navigation.PushModalAsync(
-			new NavigationPage(new FirstModalPage())
+			new NavigationPage(new FirstModalPage(applyAttachedNavBarColors: false))
 			{
-				BarBackgroundColor = Colors.Black,
+				BarBackgroundColor = Colors.Gray,
 				BarTextColor = Colors.White
 			});
+	}
+
+	private async void OnOpenAttachedPropertyModalClicked(object? sender, EventArgs e)
+	{
+		await Navigation.PushModalAsync(new NavigationPage(new FirstModalPage(applyAttachedNavBarColors: true)));
 	}
 }

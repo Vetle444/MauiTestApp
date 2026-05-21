@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTestApp.FirstModalPage"
+             Title="First">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24"
+                             Spacing="16">
+            <Label Text="This page should have a gray navigation bar with white title text."
+                   FontSize="18" />
+
+            <Button Text="Push second page"
+                    Clicked="OnPushSecondPageClicked" />
+
+            <Button Text="Close modal"
+                    Clicked="OnCloseModalClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

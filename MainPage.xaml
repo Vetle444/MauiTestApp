@@ -10,8 +10,11 @@
                    FontSize="20"
                    HorizontalTextAlignment="Center" />
 
-            <Button Text="Open modal with black nav bar"
-                    Clicked="OnOpenModalClicked" />
+                <Button Text="Open modal: NavigationPage colors"
+                    Clicked="OnOpenNavigationPageColorsModalClicked" />
+
+                <Button Text="Open modal: page attached colors"
+                    Clicked="OnOpenAttachedPropertyModalClicked" />
         </VerticalStackLayout>
     </Grid>
 
