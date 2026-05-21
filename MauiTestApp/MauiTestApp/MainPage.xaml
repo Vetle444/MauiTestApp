@@ -10,9 +10,6 @@
             Padding="30,0"
             Spacing="25">
             
-            <Button Text="TopOfPageScrollDownEditorFocus"
-                    Command="{mauiTestApp:Command ContentPageType={x:Type topOfPageScrollDownEditorFocus:TopOfPageScrollDownEditorFocus}}" />
-            
         </VerticalStackLayout>
     </ScrollView>
 
